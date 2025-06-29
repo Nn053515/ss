@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- تعريف نوع المستند واللغة المستخدمة -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUN</title>
+    <link rel="shortcut icon" href="images/logo2.jpeg" type="image/x-icon">
+    <!-- رابط لملف CSS الخاص بمكتبة Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- رابط لملف CSS الخاص بالأيقونات من Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- رابط لملف CSS المخصص للتصميم الخاص بالموقع -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- بداية قسم الرأس (header) -->
+    <header class="header">
+        <div class="logoContent">
+            <!-- رابط للشعار مع صورة الشعار -->
+            <a href="#" class="logo"><img src="images/logo.jpeg" alt=""></a>
+           
+        </div>
+
+        <nav class="navbar">
+            <!-- روابط التنقل عبر الصفحة -->
+            <a  href="#home">home</a>
+            <a  href="#product">Sections</a>
+            <a  href="#blogs">for ads</a>
+            <a  href="#review">review</a>
+            <a  href="#contact">contact</a>
+            <a  href="../عميل او متجر/index.html">login</a>
+        </nav>
+        <!--<div class="dropdown">
+            <button onclick="toggleDropdown()" class="dropbtn" id="Language">Language</button>
+            <div id="dropdownContent" class="dropdown-content">
+                <button id="arabic">AR</button>
+                <button id="english">EN</button>
+            </div>
+        </div>-->
+        
+        <div class="icon">
+            <!-- أيقونات البحث والقائمة -->
+            <i class="fas fa-search" id="search"></i>
+            <i class="fas fa-bars" id="menu-bar"></i>
+        </div>
+
+        <div class="search">
+            <!-- حقل البحث -->
+            <input type="search" placeholder="search...">
+        </div>
+        
+    </header>
+    <!-- نهاية قسم الرأس (header) -->
+
+    <!-- بداية قسم الصفحة الرئيسية (home) -->
+    <section class="home" id="home">
+        <div class="homeContent">
+            <h2>Sun for Everyone </h2>
+            <p>هو وجهتك الشاملة لاكتشاف كل البراندات السعودية في مكان واحد. نقدم لك أحدث وأفضل العلامات التجارية من جميع الفئات لتلبية جميع احتياجاتك بأعلى جودة</p>
+            <div class="home-btn">
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- نهاية قسم الصفحة الرئيسية (home) -->
+
+    <!-- بداية قسم المنتجات (product) -->
+    <section class="product" id="product">
+        <div class="heading">
+            <h2 id="h2">Our Exclusive Sections</h2>
+        </div>
+        <div class="swiper product-row">
+            <div class="swiper-wrapper">
+                <!-- بداية الشريحة الأولى للمنتجات -->
+                <div class="swiper-slide box">
+                    <div class="img">
+                        <img src="images/p.png" alt="">
+                    </div>
+                    <div class="product-content">
+                        <h3 id="h3">Perfumes</h3>
+                        <div class="orderNow">
+                            <!-- زر لطلب المنتج الآن -->
+                             <a href="../قسم العطور/index.html">
+                            <button id="orderNow">Order Now </button></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- تكرار الشرائح الأخرى للمنتجات بنفس التنسيق -->
+                <div class="swiper-slide box">
+                    <div class="img">
+                        <img src="images/j.jpeg" alt="">
+                    </div>
+                    <div class="product-content">
+                        <h3 id="jewelry">jewelry</h3>
+                        <div class="orderNow">
+                            <a href="../Jewelry Section/index.html">
+                            <button id="orderNow1">Order Now </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="img">
+                        <img src="images/m.png" alt="">
+                    </div>
+                    <div class="product-content">
+                        <h3 id="makeup">makeup</h3>
+                        <div class="orderNow">
+                            <a href="../قسم الميكب صح/index.html">
+                            <button id="orderNow2">Order Now </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="img">
+                        <img src="images/c.png" alt="">
+                    </div>
+                    <div class="product-content">
+                        <h3 id="Bodycare">care</h3>
+                        <div class="orderNow">
+                            <a href="../قسم عناية/index.html">
+                            <button id="orderNow3">Order Now </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <!-- تكرار الشريحة الثانية للمنتجات بنفس التنسيق -->
+        <div class="swiper product-row">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <div class="img">
+                        <img src="images/o.jpeg" alt="">
+                    </div>
+                    <div class="product-content">
+                        <h3>Other</h3>
+                        <div class="orderNow">
+                            <a href="../قسم اخرى صح/index.html">
+                            <button id="orderNow3"> Order Now </button>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="img">
+                        <img src="images/a.jpeg" alt="">
+                    </div>
+                    <div class="product-content">
+                        <h3>Abaya</h3>
+                    
+                        <div class="orderNow">
+                            <a href="../قسم العبايه/index.html">
+                            <button id="orderNow4">Order Now </button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="img">
+                        <img src="images/l.jpeg" alt="">
+                    </div>
+                    <div class="product-content">
+                        <h3>clothes</h3>
+                        <div class="orderNow">
+                        <a href="../قسم الملابس/index.html">
+                            <button id="orderNow5">Order Now </button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="img">
+                        <img src="" alt="">
+                    </div>
+                    <div class="product-content">
+                        <h3></h3>
+                        <div class="orderNow">
+                            <button id="orderNow6">Order Now </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- نهاية قسم المنتجات (product) -->
+
+    <!-- بداية قسم المدونات (blogs) -->
+    <section class="blogs" id="blogs">
+        <div class="swiper blogs-row">
+            <div class="swiper-wrapper">
+                <!-- بداية الشريحة الأولى للمدونات -->
+                <div class="swiper-slide box">
+                    <div class="img">
+                        <img src="images/blog-img1.jpeg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Laverne</h3>
+                        <p>صوت قادم من العجائب! يعزف موسيقى الطبيعة بكل ألوانها الساحرة ليصنع لوناً جديداً
+                             لحدائقها العطرية لافيرن دع الطبيعة تحكي لك قصتها.</p>
+                        <p>اشتكشف الان عروض لافيرن و عيش تجربه تسوق مليئه بالمتعه</p>
+                        <a href="https://laverne.com/ar/?srsltid=AfmBOopMCyeMQMpZw-JLfGQsuGasejSMUFzPJovXeRG9TCbm0RoJ1rWn" class="btn" id="lm">learn more</a>
+                    </div>
+                </div>
+                <!-- تكرار الشرائح الأخرى للمدونات بنفس التنسيق -->
+                <div class="swiper-slide box">
+                    <div class="img">
+                        <img src="images/blog-img2.jpeg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3> LA PEAU </h3>
+                        <p>عني بالفرنسية (البشرة) فنحن نختص بمنتجات العناية بالبشرة من اجود المكونات الطبيعية ، آمنة لتناسب جميع انواع البشرة ، وتركز على الترطيب العميق والترميم وتوحيد اللون والنظارة ، صنعت بحب في السعودية بأعلى معايير الجودة ..</p>
+                        <a href="https://lapeausa.com/" class="btn" id="lm1">learn more</a>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="img">
+                        <img src="images/blog-img3.jpeg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3> SERDAB </h3>
+                        <p> مجموعة من العبايات الفخمة ذات الجودة عالية وخامات مذهلة، كوني من المحظوظات باقتناء عبايات سرداب .عبايات بالالوان انيقةوتصميم رائع.</p>
+                        
+                        <a href="https://serdababaya.com/?gad_source=1&gclid=Cj0KCQjwpP63BhDYARIsAOQkATa9etKFge189_s9cJrCT70O1g1vU46F138Mnd8MgziP1scPZ_dUhUwaAjmjEALw_wcB" class="btn" id="lm2">learn more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- نهاية قسم المدونات (blogs) -->
+
+    <!-- بداية قسم النشرة البريدية (newsletter) -->
+    <section class="newsletter">
+        <form action="subscribe.php" method="POST">
+            <h3 id="subscribefor">Subscribe for the latest updates</h3>
+            <!-- Email input field -->
+            <input type="email" name="email" placeholder="Enter your email" class="box" required>
+            <!-- Subscribe button -->
+            <input type="submit" value="Subscribe" class="box2">
+        </form>
+    </section>
+    
+    <!-- نهاية قسم النشرة البريدية (newsletter) -->
+
+   <!-- Start of Reviews Section -->
+<section class="review" id="review">
+    <div class="heading">
+        <h2 id="clientreview">Client Reviews</h2>
+    </div>
+
+    <div class="swiper review-row">
+        <div class="swiper-wrapper">
+            <!-- First Review Slide -->
+            <div class="swiper-slide box">
+                <div class="client-review">
+                    <p>Absolutely love this platform! It's the best place to find the latest and greatest Saudi brands all in one place.</p>
+                </div>
+                <div class="client-info">
+                    <div class="img">
+                        <img src="images/client1.jpeg" alt="Client 1 Photo">
+                    </div>
+                    <div class="clientDetailed">
+                        <h3>Reem Al-Fahad</h3>
+                        <p>Fashion Enthusiast</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Second Review Slide -->
+            <div class="swiper-slide box">
+                <div class="client-review">
+                    <p>Great platform with a wide variety of products. It's my go-to place for discovering new Saudi brands!</p>
+                </div>
+                <div class="client-info">
+                    <div class="img">
+                        <img src="images/client2.jpeg" alt="Client 2 Photo">
+                    </div>
+                    <div class="clientDetailed">
+                        <h3>Laila Al-Mansour</h3>
+                        <p>Entrepreneur</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Third Review Slide -->
+            <div class="swiper-slide box">
+                <div class="client-review">
+                    <p>I’ve found some amazing products here! The quality of Saudi brands is unmatched, and this site makes it easy to explore them.</p>
+                </div>
+                <div class="client-info">
+                    <div class="img">
+                        <img src="images/client3.jpeg" alt="Client 3 Photo">
+                    </div>
+                    <div class="clientDetailed">
+                        <h3>Fatima Al-Saud</h3>
+                        <p>Shopper & Fashion Blogger</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Fourth Review Slide -->
+            <div class="swiper-slide box">
+                <div class="client-review">
+                    <p>Fantastic experience! I found the best local brands that perfectly fit my needs. Highly recommend it to all shopping lovers!</p>
+                </div>
+                <div class="client-info">
+                    <div class="img">
+                        <img src="images/client4.jpeg" alt="Client 4 Photo">
+                    </div>
+                    <div class="clientDetailed">
+                        <h3>Jumana Al-Rashid</h3>
+                        <p>Product Designer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        
+    </div>
+</section>
+    <form class="review-form" id="reviewForm" method="POST" action="submit_review.php">
+
+    <label for="reviewRating">Rating:</label>
+    <select id="reviewRating" name="rating" required>
+        <option value="" disabled selected>Select your rating</option>
+        <option value="1">1 - Poor</option>
+        <option value="2">2 - Fair</option>
+        <option value="3">3 - Good</option>
+        <option value="4">4 - Very Good</option>
+        <option value="5">5 - Excellent</option>
+    </select>
+
+    <label for="reviewText">Your Review:</label>
+    <textarea id="reviewText" name="review" rows="5" placeholder="Write your review here..." required></textarea>
+
+    <button type="submit">Submit Review</button>
+</form>
+<div id="reviewMessage" style="margin-top: 20px; font-size: 14px; color: green; display: none;">Thank you for your review!</div>
+<!-- End of Reviews Section -->
+
+
+    <!-- بداية قسم التذييل (footer)-->
+    <footer class="footer" id="contact">
+        <div class="box-container">
+            <div class="mainBox">
+                <div class="content">
+                    <a href="#"><img src="images/logo2.jpeg" height= 450 alt=""></a>
+                   
+                </div>
+
+                
+            </div>
+            <div class="box">
+                <h3 id="Quicklink">Quick link</h3>
+                <!-- روابط سريعة -->
+                <a href="#home" id="home1"> <i class="fas fa-arrow-right"></i>home</a>
+                <a href="#product" id="#product"> <i class="fas fa-arrow-right"></i>Sections</a>
+                <a href="#blogs" id="forads"> <i class="fas fa-arrow-right"></i>for ads</a>
+                <a href="#review" id="review1"> <i class="fas fa-arrow-right"></i>review</a>
+                <a href="#contact" id="contact1"> <i class="fas fa-arrow-right"></i>contact</a>
+
+            </div>
+            <div class="box">
+                <h3  id="ContactInfo">Contact Info</h3>
+                <!-- معلومات الاتصال -->
+                <a href="tel:0502323078"> <i class="fas fa-phone"></i>0502323078</a>
+                <a href="mailto:websitesun@gmail.com"> <i class="fas fa-envelope"></i>websitesun@gmail.com</a>
+                  
+            </div>
+
+        </div>
+        <div class="share">
+            <!-- روابط لوسائل التواصل الاجتماعي -->
+            <a href="https://www.facebook.com/profile.php?id=61568552321535" class="fab fa-facebook-f"></a>
+            <a href="https://x.com/SUN_Website" class="fab fa-twitter"></a>
+            <a href="https://www.instagram.com/sun.website6/" class="fab fa-instagram"></a>
+            <a href="https://www.pinterest.com/websitesun/" class="fab fa-pinterest"></a>
+        </div>
+        <div class="credit" id="created">
+            <!-- حقوق الطبع والنشر -->
+            created by <span>SUN team </span> |all rights reserved ! 
+        </div>
+    </footer>
+
+    <!-- رابط لملف JavaScript الخاص بمكتبة Swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- رابط لملف JavaScript المخصص -->
+    <script src="index.js"></script>
+
+</body>
+
+</html>
