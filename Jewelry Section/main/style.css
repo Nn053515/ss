@@ -1,0 +1,599 @@
+/* استيراد خط Quicksand من Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* تعريف الألوان والأنماط الأساسية */
+:root{
+    --black: #000000; /* اللون الأسود */
+    --white : #ffffff; /* اللون الأبيض */
+    --box-shadow: 0px 4px 4px rgba(72, 49, 49, 0.25); /* ظل الصندوق */
+}
+/* تنسيق ازرار اللغة
+/* تنسيق الزر الرئيسي */
+.dropbtn {
+    background-color: #3f3d3a;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    border: #000000;
+}
+
+/* تنسيق الحاوية */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 1; /* لضمان ظهور القائمة أمام العناصر الأخرى */
+}
+
+/* تنسيق القائمة المنسدلة */
+.dropdown-content {
+    display: none; /* مخفي في البداية */
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2; /* لضمان ظهور القائمة أمام العناصر الأخرى */
+    border-radius: 5px;
+}
+
+/* تنسيق الأزرار داخل القائمة */
+.dropdown-content button {
+    color: black;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.dropdown-content button:hover {
+    background-color: #ddd; /* لون عند المرور */
+}
+
+/* تطبيق نمط أساسي على جميع العناصر */
+*{
+    font-family: 'Quicksand', sans-serif; /* استخدام خط Quicksand */
+    margin: 0; padding: 0; /* إزالة الهوامش والحشوات الافتراضية */
+    box-sizing: border-box; /* تضمين الحافة والحشو في الأبعاد الإجمالية */
+    outline: none; /* إزالة التحديد الخارجي */
+    border: none; /* إزالة الحدود الافتراضية */
+    text-decoration: none; /* إزالة تزيين النصوص */
+    text-transform: capitalize; /* تحويل أول حرف من كل كلمة إلى حرف كبير */
+    transition: .2s linear; /* إضافة تأثير انتقال سلس */
+}
+
+/* تعيين حجم الخط وإخفاء التمرير الأفقي */
+html{
+    font-size: 62.5%; /* ضبط حجم الخط الأساسي إلى 10px (62.5% من 16px) */
+    overflow-x: hidden; /* إخفاء التمرير الأفقي */
+    scroll-padding-top: 7rem; /* إضافة حشو للتمرير من الأعلى */
+    scroll-behavior: smooth; /* تمكين التمرير السلس */
+}
+
+/* تخصيص نمط شريط التمرير */
+html::-webkit-scrollbar{
+    width: .8rem; /* عرض شريط التمرير */
+}
+html::-webkit-scrollbar-track{
+    background: transparent; /* خلفية شفافة لشريط التمرير */
+}
+html::-webkit-scrollbar-thumb{
+    background-color: var(--white); /* لون شريط التمرير */
+    border-radius: 5rem; /* زاوية دائرية لشريط التمرير */
+}
+
+/* نمط رأس الصفحة */
+.header{
+    top: 0;right: 0;left: 0; /* تعيين الرأس في أعلى الصفحة وامتداده الكامل */
+    background-color:#e8e1d9; /* خلفية بيضاء */
+    display: flex; /* استخدام flexbox لتخطيط المحتوى */
+    align-items: center; /* محاذاة العناصر عمودياً في المنتصف */
+    justify-content: space-between; /* توزيع العناصر بالتساوي بين الأطراف */
+    position: fixed; /* تثبيت الرأس في مكانه */
+    padding: 1.4rem 7%; /* حشوة داخلية */
+    z-index: 999; /* تعيين z-index لضمان ظهور الرأس فوق العناصر الأخرى */
+}
+
+/* نمط محتوى الشعار في الرأس */
+.header .logoContent{
+    display: flex; /* استخدام flexbox لتخطيط الشعار واسم الشعار */
+    align-items: center; /* محاذاة العناصر عمودياً في المنتصف */
+    gap: 0.1rem; /* تقليل المسافة بين الشعار واسم الشعار */
+}
+.header .logoContent .logo img{
+    height: 5rem; /* تعيين ارتفاع الصورة */
+    
+}
+.header .logoContent .logoName {
+    color: var(--black); /* لون اسم الشعار */
+    font-size: 3rem; /* حجم خط اسم الشعار */
+    font-weight: bolder; /* جعل الخط أكثر سمكاً */
+    margin-left: 0.2rem; /* تقليل المسافة بين الشعار واسم الشعار */
+}
+
+/* نمط الروابط في شريط التنقل */
+.header .navbar a{
+    font-size: 2rem; /* حجم خط الروابط */
+    margin-right: 3rem; /* مسافة بين الروابط */
+    color: var(--black); /* لون الروابط */
+    font-weight: bold; /* جعل الخط غامقاً */
+}
+.header .navbar a:hover{
+   text-decoration: none;
+    padding-bottom: .4rem; /* إضافة حشوة أسفل الرابط عند التمرير */
+    color:#38865f;
+}
+
+/* نمط أيقونات الرأس */
+.header .icon i{
+    font-size: 2rem; /* حجم الأيقونات */
+    margin-right: 2rem; /* مسافة بين الأيقونات */
+    color: var(--black); /* لون الأيقونات */
+    cursor: pointer; /* تغيير المؤشر عند التمرير فوق الأيقونة */
+}
+
+/* نمط البحث في الرأس */
+.header .search{
+    display: none; /* إخفاء حقل البحث بشكل افتراضي */
+    top: 100%; /* تعيين حقل البحث أسفل الرأس */
+    margin: 1.5rem 7%; /* حشوة داخلية */
+    background-color: transparent; /* خلفية شفافة لحقل البحث */
+    width: 50%; /* عرض حقل البحث */
+    right: 0; /* محاذاة حقل البحث إلى اليمين */
+    height: 5rem; /* ارتفاع حقل البحث */
+    position:  absolute; /* تحديد موضع حقل البحث بشكل مطلق */
+}
+.header .search input{
+    width: 100%; /* عرض حقل الإدخال ليتناسب مع عرض حقل البحث */
+    height: 100%; /* ارتفاع حقل الإدخال ليتناسب مع ارتفاع حقل البحث */
+    font-size: 1.5rem; /* حجم خط حقل الإدخال */
+    background-color: var(--white); /* خلفية بيضاء لحقل الإدخال */
+    color: var(--black); /* لون النص في حقل الإدخال */
+    margin-right: 7%; /* مسافة بين حقل الإدخال وحدود حقل البحث */
+    border-radius: 1rem; /* زوايا دائرية لحقل الإدخال */
+    padding: 0.5rem 1rem; /* حشوة داخلية لحقل الإدخال */
+    box-shadow: var(--box-shadow); /* إضافة ظل لحقل الإدخال */
+}
+.header .search.active{
+    display: inline-block; /* عرض حقل البحث عند تفعيل الحالة */
+}
+
+/* نمط شريط القوائم */
+#menu-bar{
+    display: none; /* إخفاء شريط القوائم بشكل افتراضي */
+}
+
+/* نمط القسم الرئيسي */
+.home {
+    min-height: 100vh; /* تعيين الحد الأدنى للارتفاع ليملأ الشاشة */
+    display: flex; /* استخدام flexbox لتخطيط المحتوى */
+    align-items: center; /* محاذاة العناصر عمودياً في المنتصف */
+    background: url(images/backGround.jpg) no-repeat; /* تعيين صورة خلفية */
+    background-size: cover; /* تغطية الخلفية بالكامل */
+    background-position: center center; /* محاذاة الصورة في وسط الخلفية */
+}
+.home .homeContent{
+    width: 30%; /* عرض محتوى الصفحة الرئيسية */
+    float: left; /* تعويم المحتوى إلى اليسار */
+    text-align: center; /* محاذاة النصوص في الوسط */
+    padding: 4rem; /* حشوة داخلية */
+}
+.home .homeContent h2{
+    font-size: 7rem; /* حجم خط العنوان */
+    font-weight: bolder;; /* جعل الخط أكثر سمكاً */
+    margin-bottom: 2rem; /* مسافة أسفل العنوان */
+    line-height: 5rem; /* ارتفاع السطر */
+    color: var(--black); /* لون النص */
+    text-shadow: var(--box-shadow); /* إضافة ظل للنص */
+}
+.home .homeContent p{
+    font-size: 2rem; /* حجم خط الفقرة */
+    line-height: 2; /* ارتفاع السطر */
+    margin-bottom: 2rem; /* مسافة أسفل الفقرة */
+}
+.home .homeContent .home-btn{
+    height: 3rem; /* ارتفاع الزر */
+}
+.home .homeContent .home-btn button{
+    font-size: 1.8rem; /* حجم خط الزر */
+    background-color: var(--black); /* خلفية الزر */
+    color: var(--white); /* لون النص في الزر */
+    border-radius: .7rem; /* زوايا دائرية للزر */
+    padding: .7rem 2.4rem; /* حشوة داخلية للزر */
+    cursor: pointer; /* تغيير المؤشر عند التمرير فوق الزر */
+}
+.home .homeContent .home-btn button:hover{
+    font-size: 2rem; /* زيادة حجم خط الزر عند التمرير */
+}
+
+/* نمط الأقسام */
+section{
+    padding: 2rem 7%; /* حشوة داخلية */
+}
+
+/* نمط العناوين */
+.heading{
+    text-align: center; /* محاذاة النصوص في المركز */
+    font-size: 2.6rem; /* حجم خط العنوان */
+    margin-bottom: 3rem; /* مسافة أسفل العنوان */
+    color: var(--black); /* لون النص */
+}
+
+/* نمط صف المنتجات */
+.product .product-row{
+    margin-bottom: 5rem; /* مسافة أسفل الصف */
+    display: flex; /* استخدام flexbox لتخطيط الصف */
+    align-items: center; /* محاذاة العناصر عمودياً في المنتصف */
+}
+.product .product-row .box{
+    display: flex; /* استخدام flexbox لتخطيط صندوق المنتج */
+    flex-direction: column; /* تعيين الاتجاه العمودي */
+    width: 50rem; /* عرض صندوق المنتج */
+    background-color: var(--white); /* خلفية بيضاء لصندوق المنتج */
+    align-items: center; /* محاذاة العناصر في الوسط */
+    text-align: center; /* محاذاة النصوص في المركز */
+    padding: 2rem; /* حشوة داخلية لصندوق المنتج */
+    gap: 1.5rem; /* المسافة بين العناصر داخل الصندوق */
+    border-radius: 3rem; /* زوايا دائرية لصندوق المنتج */
+    margin-right: 3rem; /* مسافة بين صناديق المنتجات */
+}
+.product .product-row .img img{
+    height: 100%; /* تعيين ارتفاع الصورة */
+    width: 100%; /* تعيين عرض الصورة */
+}
+.product .product-row .img img:hover{
+    transform: scale(1.1); /* تكبير الصورة عند التمرير فوقها */
+}
+.product .product-row .content {
+    margin-bottom: 4rem; /* مسافة أسفل محتوى المنتج */
+}
+.product .product-row .product-content h3{
+    font-size: 4rem; /* حجم خط عنوان المنتج */
+    color: var(--black); /* لون النص */
+}
+.product .product-row .product-content p{
+    font-size: 1.5rem; /* حجم خط وصف المنتج */
+    line-height: 1.6; /* ارتفاع السطر */
+    color: var(--black); /* لون النص */
+}
+.product .product-row .product-content .orderNow{
+    height: 3rem; /* ارتفاع زر الطلب الآن */
+    margin-top: 2rem; /* مسافة أعلى الزر */
+    margin-bottom: 3rem; /* مسافة أسفل الزر */
+}
+.product .product-row .product-content .orderNow button{
+    font-size: 1.8rem; /* حجم خط الزر */
+    background-color: var(--black); /* خلفية الزر */
+    color: var(--white); /* لون النص في الزر */
+    border-radius: .7rem; /* زوايا دائرية للزر */
+    padding: .7rem 2rem; /* حشوة داخلية للزر */
+    cursor: pointer; /* تغيير المؤشر عند التمرير فوق الزر */
+}
+.product .product-row .product-content .orderNow button:hover{
+    font-size: 2rem; /* زيادة حجم خط الزر عند التمرير */
+}
+
+/* نمط المدونات */
+.blogs{
+    background: url(images/new1.jpg) no-repeat; /* تعيين صورة خلفية للمدونات */
+    background-size: cover; /* تغطية الخلفية بالكامل */
+    background-position: center center; /* محاذاة الصورة في وسط الخلفية */
+}
+.blogs  .blogs-row .box {
+    display: flex; /* استخدام flexbox لتخطيط صندوق المدونة */
+    align-items: center; /* محاذاة العناصر عمودياً في المنتصف */
+    background-color: var(--white); /* خلفية بيضاء للصندوق */
+    flex-wrap: wrap; /* السماح بتغليف العناصر */
+}
+.blogs .blogs-row .box .img{
+    flex: 1 1 45rem; /* تخصيص عرض للصورة */
+}
+.blogs .blogs-row .box .img img{
+    width: 100% ; /* تعيين عرض الصورة */
+    padding: 5rem; /* حشوة حول الصورة */
+}
+.blogs .blogs-row .box .content{
+    flex: 1 1 45rem; /* تخصيص عرض لمحتوى المدونة */
+    padding: 2rem; /* حشوة داخلية لمحتوى المدونة */
+}
+.blogs .blogs-row .box .content h3{
+    font-size: 3.5rem; /* حجم خط عنوان المدونة */
+    color: var(--black); /* لون النص */
+    text-shadow: var(--box-shadow); /* إضافة ظل للنص */
+}
+.blogs .blogs-row .box .content p{
+    font-size: 1.6rem; /* حجم خط وصف المدونة */
+    color: var(--black); /* لون النص */
+    padding: 1rem 0; /* حشوة عمودية */
+    line-height: 1.8; /* ارتفاع السطر */
+}
+.blogs .blogs-row .box .content a{
+    font-size: 2rem; /* حجم خط الرابط */
+    cursor: pointer; /* تغيير المؤشر عند التمرير فوق الرابط */
+}
+.blogs .blogs-row .box .content a:hover{
+    color: var(--black); /* تغيير لون الرابط عند التمرير */
+    text-shadow: var(--box-shadow); /* إضافة ظل للنص */
+}
+
+/* نمط النشرة الإخبارية */
+.newsletter{
+    background: url(images/backGround1.jpg) no-repeat; /* تعيين صورة خلفية للنشرة الإخبارية */
+    background-size: cover; /* تغطية الخلفية بالكامل */
+    background-position: center center; /* محاذاة الصورة في وسط الخلفية */
+    background-attachment: fixed; /* تثبيت الخلفية عند التمرير */
+}
+.newsletter form{
+    max-width: 45rem; /* تعيين الحد الأقصى لعرض النموذج */
+    text-align: center; /* محاذاة النصوص في المركز */
+    padding: 5rem 0; /* حشوة داخلية للنموذج */
+}
+.newsletter form h3{
+    font-size: 3rem; /* حجم خط العنوان في النموذج */
+    color: var(--white); /* لون النص */
+    padding-bottom: .7rem; /* مسافة أسفل العنوان */
+}
+.newsletter form .box{
+    width: 100%; /* عرض الحاوية بالكامل */
+    margin: .7rem 0; /* مسافة عمودية */
+    padding: 1rem 1.2rem; /* حشوة داخلية */
+    color: var(--black); /* لون النص */
+    border-radius: .5rem; /* زوايا دائرية للحاوية */
+}
+.newsletter form .box2{
+    width: 30%; /* عرض الزر */
+    font-size: 1.5rem; /* حجم خط الزر */
+    margin-top: 1rem; /* مسافة أعلى الزر */
+    padding: .5rem .5rem; /* حشوة داخلية */
+    color: var(--black); /* لون النص */
+    background: var(--white); /* خلفية بيضاء للزر */
+    border-radius: 3rem; /* زوايا دائرية للزر */
+    cursor:pointer; /* تغيير المؤشر عند التمرير فوق الزر */
+}
+.newsletter form .box2:hover{
+    color: var(--white); /* تغيير لون النص عند التمرير */
+    background-color: var(--black); /* تغيير خلفية الزر عند التمرير */
+    outline: .1rem solid var(--white); /* إضافة حدود حول الزر عند التمرير */
+}
+
+/* نمط مراجعات العملاء */
+.review .review-row{
+    display: flex; /* استخدام flexbox لتخطيط مراجعات العملاء */
+    flex-direction: column ; /* تعيين الاتجاه العمودي */
+    align-items: center; /* محاذاة العناصر عمودياً في المنتصف */
+}
+.review .review-row .box{
+    width: 50%; /* عرض صندوق المراجعة */
+    margin-bottom: 3rem; /* مسافة أسفل الصندوق */
+    padding: 3rem; /* حشوة داخلية للصندوق */
+    border-radius: 3rem; /* زوايا دائرية للصندوق */
+    background-color: var(--white); /* خلفية بيضاء للصندوق */
+    box-shadow: var(--box-shadow); /* إضافة ظل للصندوق */
+}
+
+/* نمط مراجعات العملاء */
+.review .review-row .box .client-review{
+    margin-bottom: 3rem; /* مسافة أسفل مراجعة العميل */
+}
+.review .review-row .box .client-review p{
+    text-align: center; /* محاذاة النصوص في المركز */
+    font-size: 2.5rem; /* حجم خط مراجعة العميل */
+    line-height: 1.5; /* ارتفاع السطر */
+}
+.review .review-row .box .client-info{
+    display: flex; /* استخدام flexbox لتخطيط معلومات العميل */
+    align-items: center; /* محاذاة العناصر عمودياً في المنتصف */
+}
+.review .review-row .box .client-info .img{
+    padding-right: 3rem; /* مسافة إلى اليمين من الصورة */
+}
+.review .review-row .box .client-info .img img{
+    width: 7rem; /* عرض الصورة */
+    height: 7rem; /* ارتفاع الصورة */
+    clip-path: circle(50% at 50% 50%); /* قص الصورة لتصبح دائرية */
+}
+
+/* نمط تفاصيل العميل */
+.review .review-row .box .client-info .clientDetailed h3{
+    font-size: 2.5rem; /* حجم خط اسم العميل */
+}
+.review .review-row .box .client-info .clientDetailed p{
+    font-size: 1.5rem; /* حجم خط تفاصيل العميل */
+}
+
+/* نمط تذييل الصفحة */
+.footer {
+    background: url(images/backGround.png) no-repeat; /* تعيين صورة خلفية للتذييل */
+    background-size: cover; /* تغطية الخلفية بالكامل */
+    background-position: center center; /* محاذاة الصورة في وسط الخلفية */
+}
+.footer .box-container{
+    display: grid; /* استخدام grid لتخطيط صندوق التذييل */
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); /* تحديد تخطيط الأعمدة */
+    gap: 1.5rem; /* المسافة بين الصناديق */
+    padding: 2rem 1rem; /* حشوة داخلية */
+}
+.footer .box-container .mainBox .content{
+    display: flex; /* استخدام flexbox لتخطيط المحتوى */
+    align-items: center; /* محاذاة العناصر عمودياً في المنتصف */
+    margin-bottom: 2rem; /* مسافة أسفل المحتوى */
+}
+.footer .box-container .mainBox .content h1{
+    font-size: 2rem; /* حجم خط العنوان في التذييل */
+    color: var(--black); /* لون النص */
+}
+.footer .box-container .mainBox p{
+    font-size: 1.7rem; /* حجم خط نص التذييل */
+    line-height: 1.3; /* ارتفاع السطر */
+    margin-bottom: 2rem; /* مسافة أسفل النص */
+}
+.footer .box-container .box h3{
+    font-size: 2.2rem; /* حجم خط عنوان الصندوق */
+    color: var(--black); /* لون النص */
+    padding: 1rem 0; /* حشوة عمودية */
+}
+.footer .box-container .box a{
+    display: block; /* عرض الرابط ككتلة */
+    font-size: 1.6rem; /* حجم خط الرابط */
+    color: var(--black); /* لون النص */
+    padding: 1rem 0; /* حشوة عمودية */
+}
+.footer .box-container .box a i{
+    padding-right: .5rem; /* مسافة إلى اليمين من الأيقونة */
+    color: var(--black); /* لون الأيقونة */
+}
+.footer .box-container .box a:hover i{
+    padding-right: 2rem; /* زيادة المسافة إلى اليمين عند التمرير */
+}
+
+/* نمط مشاركة التذييل */
+.footer .share{
+    padding: 1rem 0; /* حشوة عمودية */
+    text-align: center; /* محاذاة النصوص في المركز */
+}
+.footer .share a{
+    height: 4rem; /* ارتفاع الأيقونة */
+    width: 4rem; /* عرض الأيقونة */
+    line-height: 4rem; /* محاذاة النص في وسط الأيقونة */
+    font-size: 2rem; /* حجم خط الأيقونة */
+    color: var(--white); /* لون النص في الأيقونة */
+    background: var(--black); /* خلفية الأيقونة */
+    margin: 0 .3rem; /* مسافة بين الأيقونات */
+    border-radius: 50%; /* شكل دائري للأيقونات */
+}
+.footer .share a:hover{
+    background: var(--white); /* تغيير الخلفية عند التمرير */
+    color: var(--black); /* تغيير لون النص عند التمرير */
+}
+
+/* نمط حقوق النشر في التذييل */
+.footer .credit{
+    font-size: 2rem; /* حجم خط حقوق النشر */
+    margin-top: 2rem; /* مسافة أعلى النص */
+    padding-bottom: 2rem; /* حشوة أسفل النص */
+    color: var(--black); /* لون النص */
+    text-align: center; /* محاذاة النصوص في المركز */
+}
+
+/* نمط عناصر التحكم في شريط التمرير */
+.swiper-pagination-bullet{
+    background-color: var(--black); /* لون نقاط التمرير */
+}
+.swiper-button-next{
+    color: var(--black); /* لون زر التمرير التالي */
+}
+.swiper-button-prev{
+    color: var(--black); /* لون زر التمرير السابق */
+}
+
+/* استعلامات الوسائط لتصميم الويب المتجاوب */
+
+/* عند عرض الشاشة بحد أقصى 991 بكسل */
+@media (max-width:991px){
+    html{
+        font-size: 55%; /* تقليل حجم الخط */
+    }
+    .header{
+        padding: 1.3rem 3rem; /* تقليل حشوة الترويسة */
+    }
+    .home .homeContent{
+        margin-left: 0; /* إزالة المسافة اليسرى */
+        width: 80%; /* تعيين عرض المحتوى إلى 80% */
+    }
+}
+
+/* عند عرض الشاشة بحد أقصى 768 بكسل */
+@media (max-width:768px) {
+    #menu-bar{
+        display: inline-block; /* عرض شريط القائمة */
+    }
+    .header .navbar{
+        position: absolute; /* تعيين الموقع المطلق للقائمة */
+        top: 100%; /* تعيين القمة إلى أسفل الترويسة */
+        right: -100%; /* تعيين الموقع إلى اليمين خارج الشاشة */
+        width: 25rem; /* تعيين عرض القائمة */
+        background-color: var(--white); /* خلفية بيضاء للقائمة */
+        height: 80vh; /* تعيين ارتفاع القائمة */
+    }
+    .header .navbar.active{
+        right: 0; /* عرض القائمة عند تفعيلها */
+    }
+    .header .navbar a{
+        display: block; /* عرض الروابط ككتل */
+        font-size: 2rem; /* حجم خط الروابط */
+        color: black; /* لون النص */
+        margin: 1.5rem; /* مسافة حول الروابط */
+    }
+
+    .home .homeContent{
+        margin-left: 0; /* إزالة المسافة اليسرى */
+        width: 90%; /* تعيين عرض المحتوى إلى 90% */
+    }
+}
+
+/* عند عرض الشاشة بحد أقصى 600 بكسل */
+@media (max-width:600px){
+    html{
+        font-size: 50%; /* تقليل حجم الخط */
+    }
+}
+
+/* Review Form Styles */
+.review-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review-form h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.review-form label {
+    display: block;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.review-form input,
+.review-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.review-form input[type="text"] {
+    height: 40px;
+}
+
+.review-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.review-form button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.review-form button:hover {
+    background-color: #0056b3;
+}
