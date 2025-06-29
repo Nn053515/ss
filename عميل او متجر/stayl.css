@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* تغطية كامل ارتفاع الشاشة */
+    background: linear-gradient(to bottom, white, #CDD9C5); /* تدرج الخلفية من الأبيض إلى اللون المحدد */
+    display: flex; /* استخدام الفليكس للتوسيع */
+    justify-content: center; /* توسيط المحتوى عموديًا */
+    align-items: center; /* توسيط المحتوى أفقيًا */
+    font-family: Arial, sans-serif; /* تعيين خط مناسب */
+}
+
+.container {
+    text-align: center; /* محاذاة النص في المنتصف */
+    background-color: #CDD9C5; /* خلفية الحاوية بلون شفاف */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: black; /* لون النص باللون الأسود */
+}
+
+.option {
+    background-color: #6D7A71; /* لون الزر */
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: white; /* لون النص في الزر */
+    margin: 10px; /* مساحة بين الأزرار */
+    cursor: pointer; /* شكل المؤشر عند مرور فوق الزر */
+    transition: background-color 0.3s;
+    border: none; /* إزالة الحدود الافتراضية */
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.option:hover {
+    background-color: #5A6D66; /* اللون عند التحويم */
+}
